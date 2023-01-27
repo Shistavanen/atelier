@@ -7,8 +7,8 @@ Our e-commerce web application is designed to provide users with a comprehensive
 Product Information: Users can view detailed information about a product, including a main product image, star rating, available styles, size and quantity options, an image carousel displaying different images of specific styles, and a zoom-in feature for the main product image in the gallery.
 
 <div align="center">
-  <img width="500" src="Atelier_Product_Info.png">
-  <img width="500" src="Atelier_Product_Info_Zoom.png">
+  <img width="500" height="400" src="Atelier_Product_Info.png">
+  <img width="500" height="400" src="Atelier_Product_Info_Zoom.png">
 </div>
 <br/>
 

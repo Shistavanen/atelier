@@ -29,7 +29,11 @@ Users can view a list of customer questions and answers, and mark helpful questi
 </div>
 <br/>
 
-
+# Dark Mode:
+<div align="center">
+  <img width="500" src="Dark_Mode.png">
+</div>
+<br/>
 
 # Installation
 npm install

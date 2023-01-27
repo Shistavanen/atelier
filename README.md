@@ -1,5 +1,5 @@
 # Front End Capstone
-Rpp2204mazon - Your one stop shopping site
+BobaZone - Your one stop shopping site
 
 # Description
 Our e-commerce web application is designed to provide users with a comprehensive and user-friendly shopping experience. The main features of the application include:

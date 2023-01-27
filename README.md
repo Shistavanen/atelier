@@ -22,7 +22,7 @@ Ratings and Reviews: Users can view customer reviews and ratings for a product, 
 Question and Answer: Users can view a list of customer questions and answers, and mark helpful questions or report inappropriate content. Users can also search this section to find specific questions and answers.
 
 <div align="center">
-  <img width="500" src="Questions_Answers.png">
+  <img width="500" src="Question_Answers.png">
 </div>
 <br/>
 

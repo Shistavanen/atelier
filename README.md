@@ -10,6 +10,7 @@ Product Information: Users can view detailed information about a product, includ
   <img width="500" src="Atelier_Product_Info.png">
   <img width="500" src="Atelier_Product_Info_Zoom.png">
 </div>
+<br/>
 
 Ratings and Reviews: Users can view customer reviews and ratings for a product, and filter them by relevancy, helpfulness, or recency. This section includes a search feature allowing users to find specific reviews.
 

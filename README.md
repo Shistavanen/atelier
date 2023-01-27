@@ -8,8 +8,8 @@ Our e-commerce web application is designed to provide users with a comprehensive
 Users can view detailed information about a product, including a main product image, star rating, available styles, size and quantity options, an image carousel displaying different images of specific styles, and a zoom-in feature for the main product image in the gallery.
 
 <div align="center">
-  <img width="500" height="300" src="Atelier_Product_Info.png">
-  <img width="500" height="300" src="Atelier_Product_Info_Zoom.png">
+  <img src="Atelier_Product_Info.png">
+  <img src="Atelier_Product_Info_Zoom.png">
 </div>
 <br/>
 
@@ -17,7 +17,7 @@ Users can view detailed information about a product, including a main product im
 Users can view customer reviews and ratings for a product, and filter them by relevancy, helpfulness, or recency. This section includes a search feature allowing users to find specific reviews.
 
 <div align="center">
-  <img width="500" src="Ratings_Reviews.png">
+  <img src="Ratings_Reviews.png">
 </div>
 <br/>
 
@@ -25,7 +25,7 @@ Users can view customer reviews and ratings for a product, and filter them by re
 Users can view a list of customer questions and answers, and mark helpful questions or report inappropriate content. Users can also search this section to find specific questions and answers.
 
 <div align="center">
-  <img width="500" src="Question_Answers.png">
+  <img src="Question_Answers.png">
 </div>
 <br/>
 

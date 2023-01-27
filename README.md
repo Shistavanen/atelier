@@ -1,4 +1,4 @@
-# Front End Capstone
+# Atelier
 BobaZone - Your one stop shopping site
 
 # Description

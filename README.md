@@ -31,7 +31,7 @@ Users can view a list of customer questions and answers, and mark helpful questi
 
 # Dark Mode:
 <div align="center">
-  <img width="500" src="Dark_Mode.png">
+  <img src="Dark_Mode.png">
 </div>
 <br/>
 

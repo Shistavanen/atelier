@@ -25,7 +25,6 @@ export default function Quantity(props) {
     }
 
     return (
-
         <select
           id='quantitySelector'
           style={{
@@ -41,8 +40,6 @@ export default function Quantity(props) {
             <option key={i}>{quantity}</option>
           ))}
         </select>
-
-
     )
   }
 }

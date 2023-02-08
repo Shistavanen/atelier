@@ -7,15 +7,12 @@ export default function Size(props) {
 
   if(!inStock) {
     return (
-
-        <select disabled style={{margin: '3px', width: '150px', height: '50px', textAlign: 'center', fontSize: '20px', color: '#25383C'}}>
-          <option>Out Of Stock</option>
-        </select>
-
+      <select disabled style={{margin: '3px', width: '150px', height: '50px', textAlign: 'center', fontSize: '20px', color: '#25383C'}}>
+        <option>Out Of Stock</option>
+      </select>
     )
   } else {
     return (
-
         <select
           id='sizeSelector'
           style={
@@ -40,8 +37,6 @@ export default function Size(props) {
           ))}
 
         </select>
-
-
     )
   }
 

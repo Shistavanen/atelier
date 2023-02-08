@@ -15,9 +15,6 @@ export default function CartButton(props) {
       })
   }
 
-  //if size not selected
-  //TODO: opening select menu may be difficult without external library, consider using 'focus.()'
-
   if((props.size && props.size !== 'selectsize') && props.quantitySelection) {
 
     return (

@@ -11,8 +11,6 @@ export default function Zoom(props) {
          onClick={props.expandView}
          style={{
            cursor: 'zoom-out',
-           //boxShadow: '3px 3px gray',
-           //border: '3px solid black',
            backgroundRepeat: 'no-repeat',
            backgroundSize: `${props.naturalWidth * 2.5}px ${props.naturalHeight * 2.5}px`,
            backgroundImage: `url(${props.galleryPhoto})`,

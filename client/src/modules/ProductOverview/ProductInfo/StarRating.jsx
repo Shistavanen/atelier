@@ -8,17 +8,14 @@ export default function StarRating(props) {
     memo.totalReviews = memo.totalReviews + Number(val[1])
     return memo
   }, {ratingsTotal: 0, totalReviews: 0})
-  console.log(ratings)
 
   let avg = ratings.ratingsTotal / ratings.totalReviews
-  console.log('AVG', avg)
 
   function roundToQuarter(number)  {
     return parseFloat((Math.round(number * 4) / 4).toFixed(2))
   }
 
   let roundedAvg = roundToQuarter(avg)
-  console.log('ROUNDED AVG', roundedAvg)
 
   function generateStarWidths() {
     var widthsOfStars = [...Array(5)].map((rating, index) => {

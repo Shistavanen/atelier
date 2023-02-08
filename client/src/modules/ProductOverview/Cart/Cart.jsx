@@ -6,8 +6,8 @@ import MyOutfitButton from '../ProductInfo/MyOutfitButton.jsx'
 
 export default function Cart(props) {
 
-  const [size, setSize] = useState(null)//useState(Object.entries(props.style.skus)[0][1].size)
-  const [quantity, setQuantity] = useState(null)//useState(Object.entries(props.style.skus)[0][1].quantity)
+  const [size, setSize] = useState(null)
+  const [quantity, setQuantity] = useState(null)
   const [quantitySelection, setQuantitySelection] = useState(1)
   const [skuId, setSkuId] = useState(null)
 

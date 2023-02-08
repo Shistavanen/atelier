@@ -2,8 +2,6 @@ import React from 'react'
 
 export default function Price(props) {
 
-
-
   if(props.salePrice) {
     return (
       <div data-testid='priceTest'>

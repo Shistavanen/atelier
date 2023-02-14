@@ -11,18 +11,13 @@ const WithClickTracking = (Component) => (props) => {
     let moduleClicked = e.currentTarget.id
     let elementClicked = e.target.tagName
 
-    axios.post('/interactions', {
-      element: elementClicked,
-      widget: moduleClicked,
-      time: timeOfClick
-    })
-    .then(results => {
-      console.log(results.data)
-    })
-    .catch(err => {
-      console.log(err)
-    })
-
+    axios
+      .post('/interactions', {
+        element: elementClicked,
+        widget: moduleClicked,
+        time: timeOfClick
+      })
+      .catch(err => console.log(err));
   }
 
   return (

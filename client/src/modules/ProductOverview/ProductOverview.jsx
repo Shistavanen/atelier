@@ -46,7 +46,6 @@ export default function ProductOverview({ product, productId }) {
 
     getCurrentProductData(id)
       .then(data => {
-        console.log("STYLES FROM GET REQ: ", data)
         setFeatures(data.features)
         setReviews(Object.entries(data.reviews))
 
@@ -61,7 +60,7 @@ export default function ProductOverview({ product, productId }) {
   if(!style) return null
 
   return (
-    <div data-testid="productOverviewTest" style={{marginTop: '25px', marginBottom: '30px'}}> {/* increases surrounding margins to approx centering */}
+    <div data-testid="productOverviewTest" style={{marginTop: '25px', marginBottom: '30px'}}>
       <div id='upper' style={{display: 'flex'}}>
         <Gallery style={style} setHideInfo={setHideInfo} />
         {hideInfo ? null :
@@ -71,9 +70,9 @@ export default function ProductOverview({ product, productId }) {
             <Category category={category} />
 
             <Title title={title} />
-            <br />
+            <br/>
             <Price price={price} salePrice={salePrice} />
-            <br />
+            <br/>
 
             <StyleSelector
               styles={styles}
@@ -84,13 +83,14 @@ export default function ProductOverview({ product, productId }) {
               setPrice={setPrice}
               setSalePrice={setSalePrice}
               highlightedThumbnail={highlightedThumbnail}
-              setHighlightedThumbnail={setHighlightedThumbnail}/>
+              setHighlightedThumbnail={setHighlightedThumbnail}
+            />
             <br/>
 
             <Cart style={style} setStyle={setStyle} />
           </div>
-         }
-        <br></br>
+        }
+        <br/>
 
       </div>
       <Overview slogan={slogan} description={description} features={features} />

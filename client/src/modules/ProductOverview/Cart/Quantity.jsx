@@ -7,39 +7,38 @@ export default function Quantity(props) {
     props.setQuantitySelection(quantitySelection)
   }
 
+  const dropDownStyle = {
+    margin: '3px',
+    width: '150px',
+    height: '50px',
+    textAlign: 'center',
+    fontSize: '20px',
+    color: '#25383C'
+  };
+
+  const Limit = 15;
+  const dropdownSize = (props.quantity > Limit ? Limit : Number(props.quantity));
+
+  const quantityDropdown = (
+    <select
+      id='quantitySelector'
+      style={dropDownStyle}
+      onChange={getQuantitySelection}>
+      {Array.from(new Array(dropdownSize), (x, i) => i + 1).map((quantity, i) => (
+        <option key={i}>{quantity}</option>
+      ))}
+    </select>
+  );
+
+  const disabledQuantityDropdown = (
+    <select disabled style={dropDownStyle}>
+      <option>-</option>
+    </select>
+  );
+
   //must select size for quantity dropdown to be enabled
-  if(props.size === 'selectsize' || props.size === null) {
-    return (
-        <select disabled style={{margin: '3px', width: '150px', height: '50px', textAlign: 'center', fontSize: '20px', color: '#25383C'}}>
-          <option>-</option>
-        </select>
-    )
-  } else {
+  const isSizeSelected = !(props.size === 'selectsize' || props.size === null);
 
-    //quantity to be capped at 15
-    let limit;
-    if(props.quantity > 15) {
-      limit = 15
-    } else {
-      limit = Number(props.quantity)
-    }
+  return isSizeSelected ? quantityDropdown : disabledQuantityDropdown;
 
-    return (
-        <select
-          id='quantitySelector'
-          style={{
-            margin: '3px',
-            width: '150px',
-            height: '50px',
-            textAlign: 'center',
-            fontSize: '20px',
-            color: '#25383C'
-            }}
-          onChange={e=>getQuantitySelection(e)}>
-          {Array.from(new Array(limit), (x, i) => i + 1).map((quantity, i) => (
-            <option key={i}>{quantity}</option>
-          ))}
-        </select>
-    )
-  }
 }

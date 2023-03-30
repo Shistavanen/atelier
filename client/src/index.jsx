@@ -25,7 +25,7 @@ function App() {
     */
     return axios.get('/products')
       .then(products => {
-        return products.data[4]
+        return products.data[0]
       })
   }
 
@@ -61,7 +61,6 @@ function App() {
   if(!productId) return null
 
   return (
-    <>
     <ThemeContext.Provider value={{theme, toggleTheme}}>
       <div className="appBackground" id={theme}>
 
@@ -77,7 +76,6 @@ function App() {
         <div className="appBottom"> </div>
       </div>
     </ThemeContext.Provider>
-    </>
   )
 }
 

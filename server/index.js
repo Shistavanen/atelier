@@ -42,14 +42,18 @@ app.get('/productOverview/:product_id', (req, res) => {
   const productInfo = {};
 
   idRequest = axios.get(`${BASEURL}/products/${id}`, {headers: {'Authorization': APIKEY}});
-  stylesRequest = axios.get(`${BASEURL}/products/${id}/styles`, {headers: {'Authorization': APIKEY}})
-  reviewsRequest = axios.get(`${BASEURL}/reviews/meta`, {headers: {'Authorization': APIKEY}, params: {product_id: id}})
+  stylesRequest = axios.get(`${BASEURL}/products/${id}/styles`, {headers: {'Authorization': APIKEY}});
+  reviewsRequest = axios.get(`${BASEURL}/reviews/meta`, {headers: {'Authorization': APIKEY}, params: {product_id: id}});
+  // relatedRequest = axios.get(`${BASEURL}/products/${id}/related`, {headers: {'Authorization': APIKEY}});
 
   Promise.all([idRequest, stylesRequest, reviewsRequest])
     .then(results => {
-      productInfo.features = results[0].data.features
-      productInfo.styles = results[1].data.results
-      productInfo.reviews = results[2].data.ratings
+      productInfo.features = results[0].data.features;
+      productInfo.name = results[0].data.name;
+      productInfo.category = results[0].data.category;
+      productInfo.styles = results[1].data.results;
+      productInfo.reviews = results[2].data.ratings;
+      // productInfo.related = results[3].data;
       res.status(200).send(productInfo)
     })
     .catch(err => {
@@ -66,6 +70,13 @@ app.post('/cart', (req, res) => {
     .catch(err => {
       console.log(err)
     })
+})
+
+app.get('/relatedProducts/:productId', (req, res) => {
+  let id = req.params.productId;
+  axios.get(`${BASEURL}/products/${id}/related`, {headers: {'Authorization': APIKEY}})
+    .then(results => res.status(200).send(results.data))
+    .catch(err => console.log(err));
 })
 
 app.get('/reviews', (req, res) => {

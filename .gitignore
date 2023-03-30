@@ -1,6 +1,6 @@
 node_modules
 .env
-dist
+# dist
 bundle.js
 bundle.js.gz
 bundle.js.LICENSE.txt

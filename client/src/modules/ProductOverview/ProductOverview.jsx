@@ -36,13 +36,15 @@ export default function ProductOverview({ product, productId }) {
   const [style, setStyle] = useState(null)
   const [salePrice, setSalePrice] = useState(null)
 
+  const [relatedProducts, setRelatedProducts] = useState([]);
+
   const [hideInfo, setHideInfo] = useState(false)
 
   const [styleTitle, setStyleTitle] = useState('')
   const [highlightedThumbnail, setHighlightedThumbnail] = useState(0)
 
 
-  useEffect(()=> {
+  useEffect(() => {
 
     getCurrentProductData(id)
       .then(data => {

@@ -15,7 +15,8 @@ export default function StarRating(props) {
     return parseFloat((Math.round(number * 4) / 4).toFixed(2))
   }
 
-  let roundedAvg = roundToQuarter(avg)
+  let roundedAvg = roundToQuarter(avg);
+  const STAR_WIDTH_OVERVIEW = 21;
 
   function generateStarWidths() {
     var widthsOfStars = [...Array(5)].map((rating, index) => {
@@ -41,7 +42,7 @@ export default function StarRating(props) {
         {arrayOfWidths.map((width, index) => {
           return (
             <div className='single-star-container-overview' key={index}>
-              <div className='single-star-fill-overview' style={{'width': (width * 21).toString() + 'px'}}>
+              <div className='single-star-fill-overview' style={{'width': (width * STAR_WIDTH_OVERVIEW).toString() + 'px'}}>
                 <img className='single-star-outline-overview' src={starImg}></img>
               </div>
             </div>

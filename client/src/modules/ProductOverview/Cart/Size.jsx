@@ -45,9 +45,6 @@ export default function Size(props) {
     </select>
   );
 
-  return (
-    <>
-      {inStock ? sizeDropdown : outOfStockDropdown}
-    </>
-  )
+  return inStock ? sizeDropdown : outOfStockDropdown;
+
 }

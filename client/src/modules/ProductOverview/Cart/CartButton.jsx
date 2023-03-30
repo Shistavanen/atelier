@@ -8,7 +8,7 @@ export default function CartButton(props) {
     axios
       .post('/cart', { sku_id: props.skuId })
       .catch(err => console.log(err));
-  }
+  };
 
   const cartButton = (
     <button
@@ -21,11 +21,6 @@ export default function CartButton(props) {
 
   const customerHasSelectedSizeAndQuantity = (props.size && props.size !== 'selectsize') && props.quantitySelection;
 
-  return (
-    <>
-      {customerHasSelectedSizeAndQuantity ?  cartButton : null}
-    </>
-  )
-
+  return customerHasSelectedSizeAndQuantity ?  cartButton : null;
 
 }

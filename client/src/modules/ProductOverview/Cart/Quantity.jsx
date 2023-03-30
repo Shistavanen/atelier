@@ -17,20 +17,20 @@ export default function Quantity(props) {
   };
 
   const Limit = 15;
-  const dropDownSize = (props.quantity > Limit ? Limit : Number(props.quantity));
+  const dropdownSize = (props.quantity > Limit ? Limit : Number(props.quantity));
 
-  const dropDown = (
+  const quantityDropdown = (
     <select
       id='quantitySelector'
       style={dropDownStyle}
       onChange={getQuantitySelection}>
-      {Array.from(new Array(dropDownSize), (x, i) => i + 1).map((quantity, i) => (
+      {Array.from(new Array(dropdownSize), (x, i) => i + 1).map((quantity, i) => (
         <option key={i}>{quantity}</option>
       ))}
     </select>
   );
 
-  const disabledDropDown = (
+  const disabledQuantityDropdown = (
     <select disabled style={dropDownStyle}>
       <option>-</option>
     </select>
@@ -39,10 +39,6 @@ export default function Quantity(props) {
   //must select size for quantity dropdown to be enabled
   const isSizeSelected = !(props.size === 'selectsize' || props.size === null);
 
-  return (
-    <>
-      {isSizeSelected ? dropDown : disabledDropDown}
-    </>
-  )
+  return isSizeSelected ? quantityDropdown : disabledQuantityDropdown;
 
 }

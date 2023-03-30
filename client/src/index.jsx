@@ -6,6 +6,7 @@ import ReactSwitch from 'react-switch';
 
 import WithClickTracking from './WithClickTracking.jsx'
 import ProductOverview from './modules/ProductOverview/ProductOverview.jsx'
+import RelatedProducts from './modules/RelatedProducts/RelatedProducts.jsx';
 import RatingsAndReviews from './modules/RatingsReviews/ratingsAndReviews.jsx'
 import QuesAns from './modules/QuestionsAnswers/QuesAns.jsx'
 
@@ -25,11 +26,15 @@ function App() {
     */
     return axios.get('/products')
       .then(products => {
-        return products.data[0]
+        return products.data[4]
+      })
+      .catch(err => {
+        console.log('ISSUE GETTING INITIAL PRODUCT');
+        console.error(err);
       })
   }
 
-  const [product, setProduct] = useState(null)
+  const [product, setProduct] = useState(null) //product contains category, name, default_price
   const [productId, setProductId] = useState(null)
 
   const [theme, setTheme] = useState('light')
@@ -43,6 +48,8 @@ function App() {
       .then(product => {
         setProduct(product)
         setProductId(product.id)
+        //I think i should make the productOverview express call here with modified getRelated orchestrated
+        // axios.get(`/productOverview/${id}`)
       })
       .catch(err => {
         console.log(err)
@@ -70,6 +77,7 @@ function App() {
         </div>
 
         <ProductOverviewWithClickTracking product={product} productId={productId}/>
+        <RelatedProducts product={product} productId={productId} />
         <RatingsAndReviewsWithClickTracking product_id={productId} productName={product.name}/>
         <QuesAnsWithClickTracking product={product} productId={productId}/>
 

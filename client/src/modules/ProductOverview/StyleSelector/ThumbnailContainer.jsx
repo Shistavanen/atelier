@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Thumbnail from './Thumbnail.jsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -14,29 +14,36 @@ export default function ThumbnailContainer(props) {
     props.setHighlightedThumbnail(index)
   }
 
+
   return (
     <div data-testid='thumbnailContainerTest'>
-      <strong>STYLE > </strong>{props.styleTitle.toUpperCase()}
+      <div id='styleTitleContainer'>
+        <strong>STYLE > </strong>{props.styleTitle.toUpperCase()}
+      </div>
       <br/>
       <br/>
       <div id='stylesThumbnailContainer'>
-      {props.styles.map((style, i)=> (
-        <div onClick={()=>handleClick(style, i)} id='checkedStyleDiv' key={style.style_id}>
+      {props.styles.map((style, i) => (
+        <div id='checkedStyleDiv' onClick={()=>handleClick(style, i)} key={style.style_id}>
           {props.highlightedThumbnail === i ?
             <div>
-              <FontAwesomeIcon icon="fa-solid fa-circle-check" id='styleCheckMark'/>
-              <Thumbnail style={style}
-                        index={i}
-                        src={style.photos[0].thumbnail_url}
+              <FontAwesomeIcon
+                icon="fa-solid fa-circle-check"
+                id='styleCheckMark'
+              />
+              <Thumbnail
+                style={style}
+                index={i}
+                src={style.photos[0].thumbnail_url}
               />
             </div>
             :
-            <Thumbnail style={style}
-                      index={i}
-                      src={style.photos[0].thumbnail_url}
+            <Thumbnail
+              style={style}
+              index={i}
+              src={style.photos[0].thumbnail_url}
             />
           }
-
         </div>
       ))}
       </div>

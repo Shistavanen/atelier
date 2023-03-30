@@ -1,6 +1,5 @@
 require('dotenv').config();
-const { PORT, APIKEY } = process.env
-const BASEURL = 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp'
+const { PORT, APIKEY, BASEURL } = process.env
 
 const axios = require('axios')
 const path = require('path')
@@ -20,8 +19,8 @@ app.use(express.json({limit : '1000kb'}))
 app.post('/interactions', (req, res) => {
   let interactions = req.body
   axios.post(`${BASEURL}/interactions`, interactions, {headers: {Authorization: APIKEY}})
-    .then(results => {
-      res.status(201).send(results.data)
+    .then(({ data }) => {
+      res.status(201).send(data)
     })
     .catch(err => {
       console.log(err)

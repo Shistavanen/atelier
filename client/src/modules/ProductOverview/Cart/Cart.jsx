@@ -17,16 +17,12 @@ export default function Cart(props) {
     setSkuId(style.skuId)
   }
 
-  useEffect(()=> {
-    console.log(size, quantity, quantitySelection, skuId)
-  }, [size, quantity, quantitySelection, skuId])
-
   return (
     <div style={{display: 'flex', flexWrap: 'wrap', width: '320px'}}>
       <Size style={props.style} setStyle={props.setStyle} handleSizeQuantity={handleSizeQuantity}/>
       <Quantity quantity={quantity} size={size} setQuantitySelection={setQuantitySelection}/>
       <CartButton style={props.style} size={size} quantitySelection={quantitySelection} skuId={skuId} />
-      <MyOutfitButton />
+      {/* <MyOutfitButton /> */}
     </div>
   )
 

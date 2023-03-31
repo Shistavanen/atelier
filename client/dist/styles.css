@@ -648,7 +648,7 @@
   right: 50%;
 }
 
-/*PRODUCT OVERVIEW*/
+/**************PRODUCT OVERVIEW***************/
 #ProductOverview {
   display: flex;
   justify-content: center;
@@ -790,6 +790,25 @@
   align-self: start;
   width: 40%;
 } */
+
+/*********************RELATED PRODUCTS*************************/
+.single-star-outline-product {
+  height: 21px;
+  width: 16px;
+}
+
+.single-star-fill-product {
+  position: relative;
+  display: inline-block;
+  height: 21px;
+  background-color: #fada5e;
+}
+
+.single-star-container-product {
+  height: 21px;
+  width: 16px;
+  display: inline-block;
+}
 
 
 /**************App*******************/

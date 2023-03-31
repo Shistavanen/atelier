@@ -15,7 +15,7 @@ export default function RelatedProducts({ product, productId }) {
 
   useEffect(() => {
     getRelatedProductIds(productId)
-      .then(relatedProductsIds => setRelatedProductsIds(relatedProductsIds))
+      .then(relatedProductsIds => setRelatedProductsIds([...new Set(relatedProductsIds)]))
       .catch(err => console.log(err));
   }, [productId]);
 

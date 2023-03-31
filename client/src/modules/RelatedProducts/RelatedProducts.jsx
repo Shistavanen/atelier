@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from 'react';
 import axios from 'axios';
-import RelatedProductsContainer from './RelatedProductsContainer.jsx';
+import RelatedProductsCarousel from './RelatedProductsCarousel.jsx';
+import ListHeading from './ListHeading.jsx';
 
 export default function RelatedProducts({ product, productId }) {
 
@@ -44,7 +45,12 @@ export default function RelatedProducts({ product, productId }) {
   if(!relatedProducts.length) return null;
 
   return (
-    <RelatedProductsContainer relatedProducts={relatedProducts} />
+    <div id="RelatedProducts">
+      <div style={{display: 'flex', flexDirection: 'column'}}>
+        <ListHeading heading='related products' />
+        <RelatedProductsCarousel relatedProducts={relatedProducts} />
+      </div>
+    </div>
   )
 }
 

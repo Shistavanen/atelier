@@ -1,19 +1,10 @@
 import React from 'react';
-import StarRating from '../../utils/StarRating.jsx';
 
-export default function Card({ productCategory, productName, productPrice, productImage, productRatings }) {
-  const RELATED_PRODUCTS_STAR_WIDTH = 16;
-  const RELATED_PRODUCTS_STAR_HEIGHT = 21;
+export default function Card({ children }) {
 
   return (
-    <div style={{height: '300px', width: '200px', border: 'thin solid #25383C', display:'flex', flexDirection: 'column', color: '#25383C'}}>
-      <img src={productImage} width='200' height='225' style={{objectFit: 'cover'}} />
-      <div style={{marginLeft: '5px', display:'flex', flexDirection: 'column'}}>
-        <small>{productCategory.toUpperCase()}</small>
-        <strong>{productName}</strong>
-        <small>${productPrice.salePrice ? <div style={{color: 'red'}}>{productPrice.salePrice}</div> : productPrice.originalPrice }</small>
-        <StarRating productRatings={productRatings} starWidth={RELATED_PRODUCTS_STAR_WIDTH} starHeight={RELATED_PRODUCTS_STAR_HEIGHT}/>
-      </div>
+    <div className="card">
+      {children}
     </div>
   )
 }

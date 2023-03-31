@@ -12,6 +12,7 @@ export default function RelatedProductsContainer({ relatedProducts }) {
               productCategory={product.category}
               productName={product.name}
               productPrice={{originalPrice: product.styles[0].original_price, salePrice: product.styles[0].sale_price}}
+              productRatings={Object.entries(product.reviews)}
             />
         ))
       }

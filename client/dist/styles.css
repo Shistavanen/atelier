@@ -792,6 +792,24 @@
 } */
 
 /*********************RELATED PRODUCTS*************************/
+#RelatedProducts {
+  display: flex;
+  justify-content: center;
+  color: #25383C;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  height: 300px;
+  width: 200px;
+  border: thin solid #25383C;
+}
+
 .single-star-outline-product {
   height: 21px;
   width: 16px;

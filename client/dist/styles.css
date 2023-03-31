@@ -808,6 +808,25 @@
   height: 300px;
   width: 200px;
   border: thin solid #25383C;
+  position: relative;
+}
+
+.actionButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  top: 5px;
+  left: 175px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+}
+
+.starButton {
+  color: #fada5e;
+  /* background-color: rgba(0, 0, 0, 0); */
 }
 
 .single-star-outline-product {

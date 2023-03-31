@@ -25,11 +25,11 @@ export default function RelatedProductsCarousel({ relatedProducts }) {
               productRatings={Object.entries(product.reviews)}
             >
 
-                <ActionButton clickHandler={comparisonHandler} bgColor={transparentBg}>
-                  <div className='starButton'>
-                    <FontAwesomeIcon icon={faStar}/>
-                  </div>
-                </ActionButton>
+              <ActionButton clickHandler={comparisonHandler} bgColor={transparentBg}>
+                <div className='starButton'>
+                  <FontAwesomeIcon icon={faStar}/>
+                </div>
+              </ActionButton>
 
             </ProductCard>
         ))

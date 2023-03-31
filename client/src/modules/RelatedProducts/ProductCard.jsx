@@ -8,14 +8,12 @@ export default function ProductCard({ productCategory, productName, productPrice
 
   return (
     <Card>
-      <div style={{ color: '#25383C'}}>
-        <img src={productImage} width='200' height='225' style={{objectFit: 'cover'}} />
-        <div style={{marginLeft: '5px', display:'flex', flexDirection: 'column'}}>
-          <small>{productCategory.toUpperCase()}</small>
-          <strong>{productName}</strong>
-          <small>${productPrice.salePrice ? <div style={{color: 'red'}}>{productPrice.salePrice}</div> : productPrice.originalPrice }</small>
-          <StarRating productRatings={productRatings} starWidth={RELATED_PRODUCTS_STAR_WIDTH} starHeight={RELATED_PRODUCTS_STAR_HEIGHT}/>
-        </div>
+      <img src={productImage} width='200' height='225' style={{objectFit: 'cover'}} />
+      <div style={{marginLeft: '5px', display:'flex', flexDirection: 'column'}}>
+        <small>{productCategory.toUpperCase()}</small>
+        <strong>{productName}</strong>
+        <small>${productPrice.salePrice ? <div style={{color: 'red'}}>{productPrice.salePrice}</div> : productPrice.originalPrice }</small>
+        <StarRating productRatings={productRatings} starWidth={RELATED_PRODUCTS_STAR_WIDTH} starHeight={RELATED_PRODUCTS_STAR_HEIGHT}/>
       </div>
     </Card>
   )

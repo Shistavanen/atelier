@@ -792,19 +792,19 @@
 } */
 
 /*********************RELATED PRODUCTS*************************/
-.single-star-outline-related {
+.single-star-outline-product {
   height: 21px;
   width: 16px;
 }
 
-.single-star-fill-related {
+.single-star-fill-product {
   position: relative;
   display: inline-block;
   height: 21px;
   background-color: #fada5e;
 }
 
-.single-star-container-related {
+.single-star-container-product {
   height: 21px;
   width: 16px;
   display: inline-block;
